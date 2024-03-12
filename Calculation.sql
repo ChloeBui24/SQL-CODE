@@ -23,7 +23,7 @@ Airport_fee numeric(3,2))
 drop table taxi_rides
 
 copy taxi_rides
-from 'C:\Users\DUNG BUI\Desktop\WU\Courses\Spring 24\Data\Repository\homework-3-ChloeBui24-main\yellow_tripdata_2023-01.csv'
+from 'C:\Users\Data\Repository\yellow_tripdata_2023-01.csv'
 with (format csv, header)
 
 select * from taxi_rides limit 5
@@ -115,6 +115,6 @@ select tripID, speed_mph from t4
 WHERE speed_mph< (7.9199-1.5*(14.1918-7.9199)) OR
       speed_mph> (14.1919+1.5*(14.1918-7.9199))
 ORDER BY speed_mph)
-to 'C:\Users\DUNG BUI\Desktop\WU\Courses\Spring 24\Data\Repository\homework-3-ChloeBui24-main\bad_taxi_mphs.csv'
+to 'C:\Users\Data\Repository\bad_taxi_mphs.csv'
 with (format csv, header)
 
