@@ -157,7 +157,7 @@ JOIN hw6.airports a2 on f.dest_airport_id=a2.airport_id
 ORDER BY least(f.origin_airport_id, f.dest_airport_id), 
          greatest(f.origin_airport_id, f.dest_airport_id),
          c.name)
-to 'C:\Users\DUNG BUI\Desktop\WU\Courses\Spring24\Data\Repository\homework-6-ChloeBui24-main\longest_flights.csv'
+to 'C:\UsersData\Repositorylongest_flights.csv'
 with (format csv, header)
 
 SELECT *
@@ -214,21 +214,6 @@ CREATE TABLE StudentGrades (
     total_available_points INT,
     deductions NVARCHAR(MAX) -- Store deductions as JSON
 );
-Table: Assignments_Submissions_Deductions
-+-------------------------+------------+
-| Column                  | Type       |
-+-------------------------+------------+
-| student_id              | STRING     |
-| name                    | STRING     |
-| submitted_date          | DATE       |
-| assignment              | STRING     |
-| total_available_points  | INT        |
-| deduction_id            | INT        |
-| comment                 | STRING     |
-| deduction               | FLOAT      |
-+-------------------------+------------+
-Primary Key: (student_id, assignment, submitted_date, deduction_id)
-
 Table: Assignments_Submissions_Deductions
 +-------------------------+------------+
 | Column                  | Type       |
